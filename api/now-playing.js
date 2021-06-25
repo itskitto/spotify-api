@@ -22,6 +22,7 @@ const getAccessToken = async () => {
       Authorization: `Basic ${basic}`,
       "Content-Type": "application/x-www-form-urlencoded",
     },
+    mode: 'no-cors',
     body: querystring.stringify({
       grant_type: "refresh_token",
       refresh_token,
