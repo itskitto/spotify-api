@@ -20,9 +20,9 @@ const getAccessToken = async () => {
     method: "POST",
     headers: {
       Authorization: `Basic ${basic}`,
+      'Access-Control-Allow-Origin': '*',
       "Content-Type": "application/x-www-form-urlencoded",
     },
-    mode: 'no-cors',
     body: querystring.stringify({
       grant_type: "refresh_token",
       refresh_token,
